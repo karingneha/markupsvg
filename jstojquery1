@@ -100,7 +100,7 @@ function funcman() {
 	g2.lastclick= null;
 	g2.firstnode= null;
 	//alert(g2.firstChild.getAttribute("id"));
-	$("#area").first().a(manualPoly);
+	$("#area").first().click(manualPoly);
 }
 $(window).load(function(){
 
