@@ -13,7 +13,7 @@ function manualPoly(ev) {
 	var g = ev.target.parentNode;
 	var xpos = ex;
 	var ypos = ey;
-	alert(ex+"x "+ey+"y "+xpos+"sx "+ypos+"sy "+xval+"transx "+yval+"transy");
+	//alert(ex+"x "+ey+"y "+xpos+"sx "+ypos+"sy "+xval+"transx "+yval+"transy");
 
 	var circle = document.createElementNS("http://www.w3.org/2000/svg",'circle');
 	circle.setAttribute('cx', xpos);
@@ -37,7 +37,7 @@ function manualPoly(ev) {
 		tempg = document.createElementNS("http://www.w3.org/2000/svg",'g');
 		tempg.setAttribute('id', 'tempg');
 		tempg.setAttribute('transform', 'translate('+padleft+','+padtop+')');
-		ev.target.parent().append(tempg);
+		$(ev.target).parent().append(tempg);
 	}
 	else {
 		tempg = svgobj.getElementById('tempg');
@@ -100,7 +100,7 @@ function funcman() {
 	g2.lastclick= null;
 	g2.firstnode= null;
 	//alert(g2.firstChild.getAttribute("id"));
-	$("#area").first().click(manualPoly);
+	$("#area").first().a(manualPoly);
 }
 $(window).load(function(){
 
